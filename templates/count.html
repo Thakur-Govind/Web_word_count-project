@@ -2,9 +2,9 @@
 <h2> Here's the text you entered: </h2>
 {{ fulltext }}
 <h3>Following is the count of each word</h3>
-  {{words}}
-  <br\>
-  {{word_count}}
-<br>
-<br>
+{% for word, count in sortedwords %}
+{{ word }} : {{ count }}
+<br />
+{% endfor %}
+
 <a href = "{% url 'home' %}"<u> Wanna Try Again?</a>
